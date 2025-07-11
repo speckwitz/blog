@@ -1,0 +1,1 @@
+This website is written on Vercel's NextJS framework. Run `npm run dev` to test run, `npm run build` and `npm run start` to run the production ready version build.
