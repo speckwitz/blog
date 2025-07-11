@@ -1,0 +1,56 @@
+
+
+import Embed from "@/app/component/embed"
+
+# TSTH2 cabbage counting software
+
+---
+
+**In this project, me and my team build a software that capable to count the cabbages with Artificial Intelligence using UAV or drone images. The goal is to reduce the workloads of TSTH2 worker while managing the production of cabbage**
+
+---
+
+## What is TSTH2?
+TSTH2 or Horticulture and Herbal and Horticulture Science and Technology Park (Herbal and Horticulture Science and Technology Park in Indonesian) is one of the Indonesian government's strategic project. The goal of this project is to ensure the food security in Indonesia by producing foods like cabbages and potatoes and producing excellent seed for local farmers. In order to producing food TSTH2 manages food estate which produce various vegetables such as cabbage, chilli and potatoes. Both of TSTH2 and food estate located in Pollung, Toba, North Sumatera.
+
+## What this software is for?
+This software was build based on the needs of TSTH2 which is took a record of food production in the food estate. Doing counting manually takes time and prone to error. Luckily, TSTH2 has and operating unmanned aerial vehicle or UAV to fly and take the picture of their food estate field which they used to document the quality of their harvest. This software was built to count the produced cabbage by utilizing the colored picture taken by this software.
+
+## How this software was build?
+This software utilizing one of the most popular object detection called Faster R-CNN and using one of the object detection framework called Detectron2. 
+
+In order to build a  dataset, the images which will be used to train a new model processed in many stages with software or manually. The steps include cropping to make the image can be easier to process, uploading them to the roboflow for next steps, assisted labeling and image preprocessing and augmentation to make the dataset more easy to be analyzed by the algorithm. The example of product of each process can be seen here :
+
+
+![](https://pockets.speckwitz.com/DJI_20240704085240_0001_D.jpg)
+
+*preprocessed image*
+
+![](https://pockets.speckwitz.com/DJI_20240704085730_0138_D_part_2_2.jpg)
+
+*cropped image*
+
+![](https://pockets.speckwitz.com/image_after_preprocessed.png)
+
+*post preprocessing and augmentation*
+
+After all of those process, the image are ready to be used to training. In this project, the process of model training utilizing a custom training build upon Detectron2 framework in Google Colab platform. The training requires powerful compute resources and this project needs to training multiple times with different parameters and settings to get the best model. Each training produce a snapshot of the model in .pth file and the .pth of the best model will be taken and put in the a web system.
+
+### Web system
+To make the model usable and easy to use by the client, we built a web platform using Flask framework, SQLite for database and Auth0 for authentication. This web system's main functionality is to count the number of cabbages using the Faster R-CNN machine learning model. But there are also many additional features such as authentication to prevent bad actors from make unauthorized access and history to store the information of every counting ever done in this software. The screenshot of pages in this web system can be seen below :
+1. Authentication
+![](https://pockets.speckwitz.com/Autentikasi_web.jpg)
+
+2. Counting Page
+![](https://pockets.speckwitz.com/Add_counting.jpg)
+
+3. Past counting history page
+![](https://pockets.speckwitz.com/Counting_group_web.jpg)
+
+4. Detail of counting page
+![](https://pockets.speckwitz.com/History_detail.jpg)
+
+Many of the functions of this web inspired by the raw images we acquire from TSTH2. Images they provided mostly a snapshot of some part of their field. In this website, each counting should be grouped into some "counting group" and with counting group the user can do counting on the images of different patches in the field and get the sum amount of cabbage in an entire field. 
+
+## Can I see the source code or demo?
+I'm sorry but the answer is no, this project is a final project and the the project supervisor forbid the publication of source code of this software for reasons i can not disclose.
