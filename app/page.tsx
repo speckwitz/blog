@@ -50,11 +50,16 @@ export default function About() {
           </div>
 
           <div className="col-sm-12  col-md-6">
-            <div className="card">
-              <div className="card-body">
-                <h5 className='fw-bold'>Pharmacy stock management software</h5>
+            <Link href="/note/2025-06-11_Pharmacy-stock-management-software">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className='fw-bold'>Pharmacy stock management software</h5>
+                  <p>
+                    A simple drug and product stock management software for a small business in Balige, Toba with simple microservice as the architecture.
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           <div className="col-sm-12  col-md-6">
@@ -69,6 +74,45 @@ export default function About() {
           </div>
 
         </div>
+
+        <div className="card my-3">
+          <div className="card-body">
+            <div className="align-items-center">
+              <h2 className="h3"><b>Technical skills.</b></h2>
+              <ul>
+                <li>I have experience to work with Docker, I recently used it in my TSTH2 cabbage counter software.</li>
+                <li>
+                  I also have experience with SQL. I've used MYSQL in Pharmacy stock management software and tarhilala waste bank
+                  and utilize SQLite for TSTH2 cabbage count software project.
+                </li>
+                <li>
+                  For programming languages, I have used :
+                  <ol>
+                    <li>Python : in classes, TSTH2 cabbage count software for server web and machine learning model development</li>
+                    <li>Javascript : in all project i've done to build front end</li>
+                    <li>PHP : in classes and Tarhilala waste-bank management software</li>
+                    <li>Golang : in Pharmacy stock management software</li>
+                    <li>C : in first year class, programming language fundamental.</li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="card my-3">
+          <div className="card-body">
+            <div className="align-items-center">
+              <h2 className="h3"><b>Certification & Awards</b></h2>
+              <ul>
+                <li>AZ-900 Cloud fundamental Certification</li>
+                <li>IISMA program completition certification</li>
+                <li>Duolingo English Test (DET) Language Certification</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
       <BottomBar/>
     </main>

@@ -1,0 +1,18 @@
+import Embed from "@/app/component/embed"
+
+# Pharmacy Stock Management Software
+
+
+**In this project, we build a software to manage stock for a small pharmacy in Balige. This system has two requirement, first from our client which a simple system to manage their stock and second from our project judges that require us to build simple microservice system**
+
+---
+
+## About our client and the goal of this software
+Our client is a small pharmacy in Balige, North Sumatera. The status quo is they using manual system to keep record of drugs in a single Microsoft Excell file. With this problem identified, we need our software to let them record the in and out traffic of drugs and give them important information like average, trend, etc.
+
+## How this software was build?
+We build this software with this stack
+* Client side : Flutter with API access.
+* Server side that consists of two layer
+    * Middleware : This is the system that responsible to authenticate and reroute request to appropriate service.
+    * Services : This is the part consits of multiple services (obat, produk). This services manage their own respective data and responsible to process every requests.
