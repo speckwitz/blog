@@ -130,5 +130,5 @@ main {
 }
 
 .project-items .card{
-  height: 100px;
+  min-height: 100px;
 }

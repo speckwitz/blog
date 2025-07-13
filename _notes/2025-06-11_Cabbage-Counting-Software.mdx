@@ -21,18 +21,14 @@ This software utilizing one of the most popular object detection called Faster R
 
 In order to build a  dataset, the images which will be used to train a new model processed in many stages with software or manually. The steps include cropping to make the image can be easier to process, uploading them to the roboflow for next steps, assisted labeling and image preprocessing and augmentation to make the dataset more easy to be analyzed by the algorithm. The example of product of each process can be seen here :
 
-
+1. original image
 ![](https://pockets.speckwitz.com/DJI_20240704085240_0001_D.jpg)
 
-*preprocessed image*
-
+2. cropped images
 ![](https://pockets.speckwitz.com/DJI_20240704085730_0138_D_part_2_2.jpg)
 
-*cropped image*
-
+3. post preprocessing and augmentation*
 ![](https://pockets.speckwitz.com/image_after_preprocessed.png)
-
-*post preprocessing and augmentation*
 
 After all of those process, the image are ready to be used to training. In this project, the process of model training utilizing a custom training build upon Detectron2 framework in Google Colab platform. The training requires powerful compute resources and this project needs to training multiple times with different parameters and settings to get the best model. Each training produce a snapshot of the model in .pth file and the .pth of the best model will be taken and put in the a web system.
 

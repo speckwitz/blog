@@ -2,6 +2,8 @@
 
 img {
     width : 100%;
+    height : auto;
+    max-width: 500px;
     border-radius : calc(0.375rem - 1px);
     border : black 1px solid;
     box-shadow: 5px 5px black;
